@@ -65,9 +65,13 @@ header.header{
     padding: 10px 25px;
     
 }
+.menu-mobile{
+    display: none;
+}
 .menu .menu-items{
     display: flex;
     list-style: none;
+
     margin-left: 10px; 
 }
 
@@ -159,6 +163,14 @@ header.header{
     animation: arrowAnimation 0.3s linear infinite alternate;
 }
 
+@media (max-width : 680px ){
+    .menu .menu-items{
+        flex-direction: column;
+        align-items:flex-end;
+        display:none;
+    }
+}
+/* Animações */
 @keyframes arrowAnimation{
     0%{
         top:90%;
@@ -181,7 +193,6 @@ header.header{
     display: flex;
     text-align: center;
     flex-direction: row;
-
 }
 .cards-title{
     text-align: center;
@@ -220,7 +231,12 @@ header.header{
     font-family: 'Noto Sans JP', sans-serif;
     margin-top: 10px;
 }
-
+@media (max-width : 680px ){
+    .cards{
+        min-width:320px;
+        flex-direction: column;
+    }
+}
 /* Depoimentos */
 
 .testimony-title{
@@ -264,6 +280,11 @@ header.header{
     font-size:0.9rem;
     font-family: 'Noto Sans'
 }
+@media (max-width : 680px ){
+    .testimonies .testimony-items{        
+        min-width: 320px;        
+    
+}
 /* Media Queries */
 
 @media (max-width : 680px ){
@@ -287,9 +308,5 @@ header.header{
 }
 .container{
     max-width: 300px;
-}
-.card{
-    display: flex;
-    flex-direction:column;
 }
 } 
