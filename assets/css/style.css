@@ -22,7 +22,6 @@ img{
     max-width: 960px;
     margin: 0 auto;
     padding: 10px;
-    z-index: 2;
 }
 /* Fontes | Cores | Buttons */
 .bg-dark{
@@ -51,7 +50,7 @@ img{
 
 /* Menu */
 header.header{
-    background: url("../img/header-image.jpg") center center no-repeat;
+    background: url("../img/header-image-2.jpg") center center no-repeat;
     background-size: cover;
     height: 100vh;
     margin: 0 auto;
@@ -114,6 +113,8 @@ header.header{
     display:block;
     text-align: center;
     line-height: 22px;
+    border: #bcf6fa solid 1px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
     color:#F2F2EE;    
     border-radius: 15px;
     font-size: 1rem;    
@@ -126,8 +127,7 @@ header.header{
 }
 .header .header-title{
     display: block;
-    position: relative;
-    margin-top: 33%;
+    margin-top: 30%;
     font-family: 'Noto Sans JP', sans-serif;
 }
 .header .header-title h2{
@@ -149,37 +149,38 @@ header.header{
 }
 
 .arrow-down{
-    max-width: 50px;
-    position: relative;
-    left: 50%;
-    top:48%;
+    max-width: 30px;
+    position: absolute;
+    padding:15px;
+    margin: 0 auto;
+    top:90%;
+    left: 48%;
+    background: url('../img/down-arrow.svg');
     animation: arrowAnimation 0.3s linear infinite alternate;
 }
 
 @keyframes arrowAnimation{
     0%{
-        margin-top: -10%;
+        top:90%;
     }
     25%{
-        margin-top: -10.1%;
+        top:90.5%;
     }
     50%{
-        margin-top: -10.2%;
+        top:90.6%;
     }
     75%{
-        margin-top: -10.3%;
+        top:90.7%;
     }
     100%{
-        margin-top: -10.4%;
+        top:90.8%;
     }
-}
-.arrow-down-img{
-    max-width:30px;
 }
 /* Cards */
 .cards{
     display: flex;
     text-align: center;
+    flex-direction: row;
 
 }
 .cards-title{
@@ -193,19 +194,20 @@ header.header{
     text-align: center;
     font-size:1.1rem;
     font-family: 'Noto Sans JP', sans-serif;
-    color:#cfc08e;
+    color:#FFD700;
     max-width: 300px;
     margin: 0 auto;
 }
 .cards .card-items{
     max-width:280px;
-    display: block;
     margin: 10px;
     background: #dedede;
     padding:10px;
     border-radius: 5px;
 }
-
+.cards .card-item img{
+    max-width:100%;
+}
 .cards .card-items h2{
     font-size:1.2rem;
     font-family: 'Noto Sans JP', sans-serif;
@@ -264,7 +266,7 @@ header.header{
 }
 /* Media Queries */
 
-@media (max-width : 740px ){
+@media (max-width : 680px ){
 .menu a.call-button{
     display:none;
 }
@@ -277,9 +279,8 @@ header.header{
     
 }
 .arrow-down{
-
     max-width: 50px;
-    position: relative;
+    position: absolute;
     left: 50%;
     top:40%;
     animation: arrowAnimation 0.5s linear infinite alternate;
@@ -287,5 +288,8 @@ header.header{
 .container{
     max-width: 300px;
 }
-
+.card{
+    display: flex;
+    flex-direction:column;
+}
 } 
