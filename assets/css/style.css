@@ -6,7 +6,8 @@
 }
 body{
     padding: 0;
-    background-color:#F2F2EE ;
+    background-color:#F2F2EE;
+    font-family: 'Poppins', sans-serif;
 }
 a{
     text-decoration: none;
@@ -39,8 +40,7 @@ img{
     line-height: 22px;
     color:#F2F2EE;    
     border-radius: 15px;
-    font-size: 1rem;    
-    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;   
     
 }
 .more-about{
@@ -54,6 +54,7 @@ header.header{
     background-size: cover;
     height: 100vh;
     margin: 0 auto;
+    position: relative;
     padding:10px;
     
 }
@@ -61,8 +62,9 @@ header.header{
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content:space-around;
     padding: 10px 25px;
+    justify-content:center;
     
 }
 .menu-mobile{
@@ -86,7 +88,6 @@ header.header{
     display: block;
     padding: 10px;
     color: #5379b6;
-    font-family: 'Noto Sans JP', sans-serif;
 }
 .menu .menu-items a:hover{    
     color: #689aec;
@@ -110,29 +111,27 @@ header.header{
     
 }
 .menu a.call-button{
-    width:160px;
-    height: 35px;
-    padding:5px 0px;
-    background:#5379b6;
     display:block;
-    text-align: center;
-    line-height: 22px;
-    border: #bcf6fa solid 1px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
-    color:#F2F2EE;    
+    padding:8px 40px;
+    background:#5379b6;
+    color:#F2F2EE;   
     border-radius: 15px;
-    font-size: 1rem;    
-    font-family: 'Noto Sans JP', sans-serif;
-
+    font-size: 0.875rem;
+    border-bottom: 3px inset #54A2CC;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .menu a.call-button:hover{    
-    background:#689aec;
-    transition: 0.5s
+    background:#5379b6;    
+    border-bottom: 1px inset #54A2CC;
+    transition: 0.3s
 }
 .header .header-title{
+    position: absolute;
     display: block;
-    margin-top: 30%;
-    font-family: 'Noto Sans JP', sans-serif;
+    top: 300px;
+    left: 100px;
+
 }
 .header .header-title h2{
     font-size: 3.6rem;
@@ -191,29 +190,26 @@ header.header{
 /* Cards */
 .cards{
     display: flex;
-    text-align: center;
     flex-direction: row;
 }
 .cards-title{
     text-align: center;
-    font-size:2rem;
+    font-size:1.8rem;
+    letter-spacing: 2px;
     color:#F2F2EE;
-    font-family: 'Noto Sans JP', sans-serif;
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
-.card-text{
-    text-align: center;
-    font-size:1.1rem;
-    font-family: 'Noto Sans JP', sans-serif;
+.cards-subtitle{
+    font-size:0.875rem;
     color:#FFD700;
+    text-align: center;
     max-width: 300px;
     margin: 0 auto;
 }
 .cards .card-items{
-    max-width:280px;
+    min-width:270px;
     margin: 10px;
     background: #dedede;
-    padding:10px;
     border-radius: 5px;
 }
 .cards .card-item img{
@@ -221,15 +217,31 @@ header.header{
 }
 .cards .card-items h2{
     font-size:1.2rem;
-    font-family: 'Noto Sans JP', sans-serif;
     text-align: center;
-    margin: 10px 0;
+    margin-top: 15px;
 }
-.cards .card-items p{
-    padding:10px 25px 25px 0;
-    font-size: 1rem;
-    font-family: 'Noto Sans JP', sans-serif;
-    margin-top: 10px;
+.cards .description p{
+    padding:10px 15px;
+    color:#383636;
+    font-size: 0.875rem;
+}
+a.more-about{
+    display:block;
+    padding:8px 10px;
+    background:#5379b6;
+    color:#F2F2EE;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    border-bottom: 3px inset #54A2CC;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+a.more-about:hover{  
+    border: 1px solid #54A2CC; 
+    border-bottom: 1px inset #54A2CC;  
+    transition: 0.3s  
 }
 @media (max-width : 680px ){
     .cards{
@@ -241,16 +253,15 @@ header.header{
 
 .testimony-title{
     text-align: center;
+    letter-spacing: 2px;
     font-size:2rem;
-    color:#cfc08e;
-    font-family: 'Noto Sans JP', sans-serif;
+    color:#FFD700;
     margin: 30px 0px 0px 0px;
 }
-.testimony-text{
+.testimony-subtitle{
     text-align: center;
     font-size:1.1rem;
-    font-family: 'Noto Sans JP', sans-serif;
-    columns: #222222;
+    color: #363535;
     max-width: 300px;
     margin: 10px auto 20px auto;
 }
@@ -273,7 +284,6 @@ header.header{
 }
 .testimonies .testimony-items p{
     font-size:1rem;
-    font-family: 'Noto Sans JP', sans-serif;
     margin-bottom: 20px;
 }
 .testimonies .testimony-items cite{
