@@ -1,4 +1,7 @@
 /* Resets */
+html{
+    font-size:87%
+}
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +23,7 @@ img{
 /* Containers */
 
 .container{
-    max-width: 960px;
+    max-width: 1172px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -127,11 +130,9 @@ header.header{
     transition: 0.3s
 }
 .header .header-title{
-    position: absolute;
+    margin-top:200px;
+    text-align: center;
     display: block;
-    top: 300px;
-    left: 100px;
-
 }
 .header .header-title h2{
     font-size: 3.6rem;
@@ -139,11 +140,12 @@ header.header{
 }
 .header .header-title h2::after{
     content: '';
-    width: 180px;
-    display: none;
-    height: 10px;
-    display:block;
-    border-bottom: solid 4px #333;
+    width: 250px;
+    height: 1px;
+    background:#333333;
+    display: block;
+    padding: 1px;
+    margin: 0 auto;
 }
 .header .header-title p{
     font-size: 1.2rem;
@@ -191,6 +193,7 @@ header.header{
 .cards{
     display: flex;
     flex-direction: row;
+    justify-content: center;;
 }
 .cards-title{
     text-align: center;
@@ -207,18 +210,28 @@ header.header{
     margin: 0 auto;
 }
 .cards .card-items{
-    min-width:270px;
+    max-width:280px;
     margin: 10px;
     background: #dedede;
-    border-radius: 5px;
+    border-radius: 5px;    
+    border-bottom: 4px #FFD700 solid
 }
 .cards .card-item img{
     max-width:100%;
 }
 .cards .card-items h2{
     font-size:1.2rem;
+    display:block;
     text-align: center;
     margin-top: 15px;
+}
+.cards .card-items h2::after{
+    content:'';
+    display:block;
+    background:#b4b4b4;
+    width: 150px;
+    padding:1px;
+    margin: 5px auto;
 }
 .cards .description p{
     padding:10px 15px;
@@ -283,25 +296,55 @@ a.more-about:hover{
     min-width: 500px;
 }
 .testimonies .testimony-items p{
-    font-size:1rem;
+    font-size:0.875rem;
     margin-bottom: 20px;
 }
 .testimonies .testimony-items cite{
-    font-size:0.9rem;
-    font-family: 'Noto Sans'
+    font-size:0.7rem;
+    font-family: 'Poppins', sans-serif;
 }
 @media (max-width : 680px ){
     .testimonies .testimony-items{        
-        min-width: 320px;        
-    
+        min-width: 320px;    
+    }
 }
+
+/* Footer */
+
+.footer{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#222222;
+    padding: 20px 0;
+    flex-direction:column;
+}
+.footer .midias{
+    display: flex;
+    background:#FFD700;
+    padding: 5px 20px;
+    margin:10px auto;
+}
+.footer .midias a{
+    display: block;
+    margin: 5px 10px;
+}
+.footer .midias a i{
+    color:#333333
+}
+.footer .copy p{
+    display: block;
+    color:#666
+}
+
 /* Media Queries */
 
 @media (max-width : 680px ){
-.menu a.call-button{
+
+    .menu a.call-button{
     display:none;
 }
-.menu{
+    .menu{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -309,14 +352,14 @@ a.more-about:hover{
     padding: 10px 25px;
     
 }
-.arrow-down{
+    .arrow-down{
     max-width: 50px;
     position: absolute;
     left: 50%;
     top:40%;
     animation: arrowAnimation 0.5s linear infinite alternate;
 }
-.container{
+    .container{
     max-width: 300px;
 }
-} 
+}
