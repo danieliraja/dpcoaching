@@ -1,12 +1,12 @@
 Menu ={
     toggleMenu() {
-        document.querySelector('.nav ul').classList.toggle('active');        
+        document.querySelector('ul.menu-items').classList.toggle('active');        
     }
 }
 
 Blog = {
 
-    toggle : () => {
+    toggleBlog(){
 
     },
 
@@ -16,5 +16,16 @@ Blog = {
 
 Ultils = {
 
+    getYear(){
+        let date = new Date();
+        date = date.getFullYear();
+        let year = document.querySelector('.year');
+        year.innerHTML = date;
+    }
+
+
+
 }
+
+Ultils.getYear();
 
