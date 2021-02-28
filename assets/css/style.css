@@ -1,6 +1,7 @@
 /* Resets */
 html{
-    font: size 93%
+    font: size 93%;
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -116,13 +117,14 @@ header.header{
     margin: 0 auto;
     visibility: hidden;
     opacity: 0;
+    transform: scaleX(0);
 }
 .menu-items a:hover::after, .menu-items a:active::after{    
     display:block;
     visibility: visible;
     opacity: 1;
-    transition-duration: 0.6s;
-    
+    transform: scaleX(1);
+    transition:transform 0.4s ease-in-out;    
 }
 
 /* buttons */
@@ -148,7 +150,7 @@ a.btn{
     letter-spacing: 2px;
     text-align: center;
     text-transform: uppercase;
-    margin: 20px auto;
+    margin: 24px auto;
 }
 a.more-about{    
     border-bottom: 3px inset #4857C7;
@@ -176,20 +178,21 @@ a.btn:hover{
 }
 .header .header-title h2::after{
     content: '';
-    width: 250px;
+    width: 300px;
     height: 1px;
-    background:#333333;
+    background:#000;
+    opacity: 0.6;
     display: block;
     padding: 1px;
     margin: 0 auto;
 }
 .header .header-title p{
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 12px;
     color:#444
 }
 .arrow-down{
-    margin: 0 auto;   
+    margin: 150px auto 0px auto;  
     width:40px;
     height:40px;
     animation: arrowAnimation 0.4s linear infinite alternate;
@@ -225,7 +228,6 @@ a.btn:hover{
         display: none;
     }
     .nav .menu-items.active {
-        
         z-index: 2;
         animation: opacityAnimation;
 
@@ -272,7 +274,7 @@ a.btn:hover{
     
     
     .header .header-title{
-        margin-top:50px;
+        margin-top:104px;
         padding-bottom:150px;
         line-height:1.2;
         text-align: center;
@@ -313,7 +315,22 @@ a.btn:hover{
     padding-bottom: 20px;
     background: #dedede;
     border-radius: 5px;    
-    border-bottom: 4px #FFD700 solid
+    cursor: pointer;
+}
+.cards .card-items::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    border-radius: 5px;
+    border-bottom: 4px #FFD700 solid;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.cards .card-items:hover:after{    
+    transform: scaleX(1);
 }
 .cards .card-items > i{
     position: absolute;
@@ -356,7 +373,8 @@ a.btn:hover{
 
 @media (max-width : 720px ){
     .cards{
-        min-width:360px;
+        max-width:300px;
+        margin:0 auto;
         flex-direction: column;
     }
     .cards .card-items{
@@ -464,7 +482,7 @@ a.btn:hover{
     max-width: 960px;
     display:flex;
     flex-direction: row;
-    margin: 40px;
+    margin: 20px 20px;
     justify-content:center;
     align-items:center;
 }
@@ -472,7 +490,16 @@ a.btn:hover{
     margin-bottom: 10px;
     text-align: center;
 }
+.more-about-container h2::after{
+    content:'';
+    display:block;
+    margin: 10px auto 0 auto;
+    width:60%;
+    height: 3px;
+    background:#dddada;
+}
 .more-about-description p{
+
     max-width: 360px;
     height: 360px;  
     border-radius: 5px;
@@ -480,6 +507,14 @@ a.btn:hover{
     font-size:0.875rem;
     padding: 20px;
     background: #dddada;
+    scrollbar-color:#FFD700;
+}
+.more-about-description p::-webkit-scrollbar {
+    background-color: #FFD700;
+    outline: 2px solid slategrey;
+}
+.more-about-description p::-webkit-scrollbar-thumb {
+    background-color: #232323;
 }
 .more-about-img-doubts-1{
     width: 360px;
@@ -578,7 +613,6 @@ a.btn:hover{
     color:#666
 }
 
-/* Media Queries */
 
 
 
