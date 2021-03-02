@@ -623,6 +623,8 @@ a.btn:hover{
 }
 .blog-content{
     padding:50px;
+    font-size:1.1rem;
+    font-weight: 400;
     background: var(--grey-terciary);
 }
 .blog-title{
@@ -637,6 +639,11 @@ a.btn:hover{
     display: block;
     height: 2px;
     background:var(--grey-terciary);
+}
+@media(max-width : 720px){
+    .blog-content{
+        padding:10px;
+    }
 }
 /* Contato */
 .contact.container{
