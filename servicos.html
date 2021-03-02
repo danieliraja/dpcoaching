@@ -17,20 +17,20 @@
         <div class="container">
             <div class="menu">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/img/logo.png" alt=""></a>
-                </div>
+                    <a href="index.html" title="logo">
+                        <img src="assets/img/logo-site.png" alt="Logo"></a>
+                </div>                
                 <nav class="nav">
-                    <ul class="menu-items">
-                        <li class="navbar-item"><a href="index.html">Inicio</a></li>
-                        <li class="navbar-item"><a href="sobre.html">Sobre</a></li>
-                        <li class="navbar-item"><a href="servicos.html">Serviços</a></li>
-                        <li class="navbar-item"><a href="blog.html">Blog</a></li>
-                        <li class="navbar-item"><a href="contato.html">Contato</a></li>
-                    </ul>
-                    <div onclick="Menu.toggleMenu();" class="menu-mobile">
-                        <a class="hamburger" href="#">MENU <i class="im im-menu"></i></a>
-                    </div>
+                        <ul class="menu-items">
+                            <li class="navbar-item"><a href="index.html" title="pagina inicial">Inicio</a></li>
+                            <li class="navbar-item"><a href="sobre.html" title="sobre nós">Sobre</a></li>
+                            <li class="navbar-item"><a href="servicos.html" title="Serviços">Serviços</a></li>
+                            <li class="navbar-item"><a href="blog.html" title="blog">Blog</a></li>
+                            <li class="navbar-item"><a href="contato.html" title="contato">Contato</a></li>
+                        </ul>
+                        <div onclick="Menu.toggleMenu()" class="menu-mobile">
+                            <a class="hamburger" href="#" title="menu-mobile">MENU <i class="im im-menu"></i></a>
+                        </div>                 
                 </nav>
             </div>
         </div>
@@ -97,22 +97,28 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="meio-de-contato">
-            <div class="ligar">
-                <a href="tel:(21) 98409-7619" class="button-ligar"><i class="im im-phone"></i> (21) 98409-7619</a>
+        <div class="footer-container">
+            <div class="footer-contact-items">
+                <ul>
+                    <li><i class="im im-phone"></i>Tel: <a href="tel:(21) 98409-7619" title="Telefone" class="">
+                     (21) 98409-7619</a></li>
+                    <li><i class="im im-mail"></i>Email:  <a href="mailto:pradanilo@gmail.com" title="Email" class="">
+                     pradanilo@gmail.com</a></li>
+                </ul>
+                
             </div>
             <div class="midias">
-                <a href="https://api.whatsapp.com/send?phone=5521984097619" class="font-green"><i
+                <a href="https://api.whatsapp.com/send?phone=5521984097619" title="Whatsapp" class="font-green"><i
                         class="im im-whatsapp"></i></a>
-                <a href="https://www.facebook.com/coach.Danilo" class="font-dark-blue"><i
+                <a href="https://www.facebook.com/coach.Danilo" title="Facebook" class="font-dark-blue"><i
                         class="im im-facebook"></i></a>
-                <a href="https://www.instagram.com/dpcoaching/" class="font-insta"><i class="im im-instagram"></i></a>
-                <a href="https://twitter.com/Danprado10" class="font-blue"><i class="im im-twitter"></i></a>
+                <a href="https://www.instagram.com/dpcoaching/" title="Instagram" class="font-insta"><i class="im im-instagram"></i></a>
+                <a href="https://twitter.com/Danprado10" title="twitter" class="font-blue"><i class="im im-twitter"></i></a>
             </div>
         </div>
         <div class="copy">
             <p>
-                &copy;DP Coaching <span class="year">2021</span> | todos direitos reservados.
+                &copy;DP Coaching <span class="year">2021</span> | Todos direitos reservados.
             </p>
         </div>
     </footer>
