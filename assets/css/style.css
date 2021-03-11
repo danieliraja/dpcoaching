@@ -4,7 +4,8 @@ html{
     scroll-behavior: smooth;
 }
 :root{
-    --main-color: #007cd4;
+    --main-color: #0077D1;
+    --font-primary-color: #232323;
     --secondary-color: #046eb9;
     --grey-secondary: #5e5e5e;
     --grey-terciary: #dddada
@@ -103,7 +104,7 @@ header.header{
 .menu-mobile{
     visibility: hidden;
 }
-.nav{
+.menu .nav{
     display: flex;
     justify-content:center;
     align-items: center;
@@ -115,28 +116,28 @@ header.header{
 }
 
 .menu .menu-items li{
-    margin: 5px;
+    margin: 5px 10px;
     padding: 5px;    
 }
 .menu .menu-items a{
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: block;
-    padding: 8px 12px 0px 0px;
+    padding: 8px 16px 0px 0px;
     font-family: 'Poppins', sans-serif;
-    color: rgb(51, 51, 51);
+    color:var(--secondary-color);
+    font-weight: 400;
 }
 .menu .menu-items a:hover{    
-    color: #5279b6;
+    color: var(--secondary-color);
 }
 .menu .menu-items a::after{
     content: '';
     width: 100%;
     display: none;
-    height: 4px;
+    height: 2px;
     display:block;
-    border-bottom: solid 4px #5279b6;
+    border-bottom: solid 3px currentColor;
     margin: 0 auto;
     visibility: hidden;
     opacity: 0;
@@ -147,7 +148,7 @@ header.header{
     visibility: visible;
     opacity: 1;
     transform: scaleX(1);
-    transition:transform 0.4s ease-in-out;    
+    transition:transform 0.3s ease-in-out;    
 }
 
 /* buttons */
@@ -619,6 +620,40 @@ a.btn:hover{
         margin-bottom: 20px;
     }
 }
+/* Serviços */
+.services-description{
+    max-width:750px;
+    margin: 0 auto;
+}
+.services-description ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.services-description ul li{
+    width:350px; 
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;   
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background:#d6d6d4;    
+    color:var(--font-primary-color)
+}
+.services-description ul li i{
+    font-size:3rem;
+    color: var(--main-color);
+}
+.services-description ul li p{
+    font-size:0.875rem!important;
+    text-align: left;
+}
+
+
+
 /* Clientes */
 
 .clients{

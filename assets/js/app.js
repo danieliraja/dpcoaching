@@ -75,6 +75,10 @@ Blog = {
 };
 
 Utils = {
+    linkCreator(string){
+        const finalLink = string.replace(/\s/g, '-').trim()
+        console.log(finalLink.toLowerCase());
+    },
     getYear() {
         let date = new Date();
         date = date.getFullYear();
@@ -91,7 +95,7 @@ Utils = {
         });
     },
 };
-
+Utils.linkCreator('CONSULTOR INDIVIDUAL DO ASSESSMENT PEAKS');
 Blog.loadBlog();
 Utils.noAttr("a", "title");
 Utils.getYear();
