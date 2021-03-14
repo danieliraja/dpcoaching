@@ -19,16 +19,9 @@ Blog = {
     },
 
     loadBlogContent() {
-        let blogNav = document.querySelectorAll(".blog-nav a");
-        const link = document.querySelector("article.blog-container");
 
-        blogNav.forEach((item) => {
-            item.addEventListener("click", () => {
-                const linkToNewPage = `blog/${item.getAttribute("title")}.html`;
-                link.setAttribute("data-include", linkToNewPage);
-                console.log(link);
-            });
-        });
+        const url = window.location.href.split();    
+        console.log(url);
     },
 
     loadBlog() {
@@ -95,7 +88,7 @@ Utils = {
         });
     },
 };
-Utils.linkCreator('CONSULTOR INDIVIDUAL DO ASSESSMENT PEAKS');
+Blog.loadBlogContent();
 Blog.loadBlog();
 Utils.noAttr("a", "title");
 Utils.getYear();

@@ -611,22 +611,24 @@ a.btn:hover{
     background-size: cover;
 }
 
-@media (max-width: 768px){
+@media (max-width: 720px){
     .about-author-description{
-        max-width:350px;
+        max-width:350px;        
     }
     .more-about-description{
         max-width:380px;
         display:flex;
+        margin: 12px 0px;
         flex-direction: column;
     }
     .more-about-img-doubts-1{
-        width: 350px;
+        width: 340px;
+        margin: 0px 0;
         margin-left: 0;
         margin-top: 20px;
     }
     .more-about-img-doubts-2{
-        width:350px;
+        width:340px;
         margin-right: 0;
         margin-bottom: 20px;
     }
@@ -703,7 +705,11 @@ a.btn:hover{
 /* Blog */
 
 .blog.container{
-    max-width: 980px;   
+    max-width: 980px;
+}
+.blog-image{
+    width:300px;
+    flex-grow: unset;
 }
 .blog-header-info{
     display:flex;
@@ -718,6 +724,9 @@ a.btn:hover{
     font-weight: bold;
 }
 .blog-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding:50px;
     font-size:1.1rem;
     font-weight: 400;
@@ -760,6 +769,7 @@ a.btn:hover{
 }
 .contact-list-items li{
     padding-top: 4px 0;
+    color: var(--grey-secondary);
     
 }
 .contact-list-items li a{    
@@ -771,6 +781,10 @@ a.btn:hover{
 .contact-list-items li:nth-child(2n + 1){
     padding-bottom: 18px;
     border-bottom: 1px solid #BDBDBA;
+}
+.contact-list-items li:last-child{
+    padding-bottom: 18px;
+    border-bottom: none;
 }
 .contact-list-items li a i{
     margin-right: 5px;
