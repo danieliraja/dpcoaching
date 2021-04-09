@@ -773,10 +773,48 @@ a.btn:hover{
     border: 1px solid currentColor;
     align-self: flex-end;
 }
+.blog-card-item-thumb{
+    max-width:100%;
+}
+
+/* blog cards mini */
+.blog-card-item {
+    margin: 24px 0px;
+}
+.blog-card-subtitle-items{
+    /* display:flex; */
+}
+.blog-card-subtitle-items > a.blog-read-more-button{
+    display:flex;
+    width: 100px;
+    margin:12px 0;
+    align-content: flex-end;
+}
+
+
 @media(max-width : 720px){
     .blog-content{
         padding:10px;
     }
+    .blog.container{
+        flex-direction: column;
+    }
+    .blog-primary-card{
+        width: 320px
+    }
+    .blog-cards::after{
+        content: '';
+        display: block;
+        max-width: 50%;
+        margin: 20px auto;
+        border-bottom: 2px solid #BDBDBA;
+
+
+    }
+    .blog-card-item{
+        width: 320px
+    }
+
 }
 /* Blog pagina principal */
 .main-blog{

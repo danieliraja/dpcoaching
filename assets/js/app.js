@@ -17,11 +17,27 @@ Blog = {
         };
         xobj.send(null);
     },
-
+    blogCards(){
+        const cards = document.querySelectorAll('.blog-card-item')
+        
+        cards.forEach((item) => {
+            const image = item.lastElementChild.getAttribute('href').split('/')
+            const subtitle = item.querySelector('.blog-subtitle')
+            const cardImage = `
+            <div class="blog-card-subtitle-items">
+            <img class="blog-card-item-thumb" src="../assets/img/blog/${image[1].replace('.html', '.png')}"/>
+            ${item.innerHTML}
+            </div>
+            `
+            console.log()
+            item.innerHTML = cardImage
+        })
+            
+        
+    },
     loadBlogContent() {
 
-        const url = window.location.href.split();    
-        console.log(url);
+        const url = window.location.href.split();
     },
 
     loadBlog() {
@@ -88,6 +104,7 @@ Utils = {
         });
     },
 };
+Blog.blogCards()
 Blog.loadBlogContent();
 Blog.loadBlog();
 Utils.noAttr("a", "title");
