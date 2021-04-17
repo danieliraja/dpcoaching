@@ -15,7 +15,7 @@ Blog = {
             const image = item.lastElementChild.getAttribute('href').split('/')
             const cardImage = `
             <div class="blog-card-subtitle-items">
-            <img class="blog-card-item-thumb" src="../assets/img/blog/${image[1].replace('.html', '.png')}"/>
+            <img class="blog-card-item-thumb" src="assets/img/blog/${image[1].replace('.html', '.png')}"/>
             ${item.innerHTML}
             </div>
             `
