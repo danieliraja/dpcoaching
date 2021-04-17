@@ -779,16 +779,28 @@ a.btn:hover{
 
 /* blog cards mini */
 .blog-card-item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: relative;
     margin: 24px 0px;
+    
 }
-.blog-card-subtitle-items{
-    /* display:flex; */
+.blog-primary-card-items{
+    padding-top: 0px;
+    max-height: 2882px;
+    overflow-y: auto;
+}
+.blog-primary-card-items > .blog-card-item:first-child{
+    margin-top: 0px;
+    padding-top: 10px;
 }
 .blog-card-subtitle-items > a.blog-read-more-button{
     display:flex;
+    position: absolute;
+    top: 93%;
+    right:0px;
     width: 100px;
     margin:12px 0;
-    align-content: flex-end;
 }
 
 
@@ -808,8 +820,12 @@ a.btn:hover{
         max-width: 50%;
         margin: 20px auto;
         border-bottom: 2px solid #BDBDBA;
-
-
+    }
+    .blog-primary-card-items{
+        max-width: 96%;
+        padding-top: 0px;
+        max-height: 450px;
+        overflow-y: auto;
     }
     .blog-card-item{
         width: 320px
@@ -889,7 +905,29 @@ a.btn:hover{
     margin: 10px 8px;
 }
 
-
+@media (max-width :720px){
+    .main-blog{
+        width:96%
+    }
+    .blog-primary-card-items{
+        width:100%;
+    }
+    .main-blog-title{
+        font-size:2rem;
+        line-height:2.4rem;
+    }
+    .main-blog-subtitle{
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .main-blog-header-info span{
+        font-size: 0.675rem;
+        padding: 8px;
+    }
+    .main-blog-content{
+        font-size: 0.875rem;
+    }
+}
 
 /* Contato */
 .contact.container{

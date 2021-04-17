@@ -5,24 +5,14 @@ Menu = {
 };
 
 Blog = {
-    getBlogContent(callback) {
-        var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-        xobj.open("GET", "./../../blog/blog.json", true); // Replace 'my_data' with the path to your file
-        xobj.onreadystatechange = function () {
-            if (xobj.readyState == 4 && xobj.status == "200") {
-                // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-                callback(xobj.responseText);
-            }
-        };
-        xobj.send(null);
-    },
     blogCards(){
-        const cards = document.querySelectorAll('.blog-card-item')
-        
+        const blogHeight = ''
+        document.querySelector('.blog-cards') !== null  ? blogHeight == document.querySelector('.blog-cards').offsetHeight : null 
+        console.log(blogHeight)
+
+        const cards = document.querySelectorAll('.blog-card-item')        
         cards.forEach((item) => {
             const image = item.lastElementChild.getAttribute('href').split('/')
-            const subtitle = item.querySelector('.blog-subtitle')
             const cardImage = `
             <div class="blog-card-subtitle-items">
             <img class="blog-card-item-thumb" src="../assets/img/blog/${image[1].replace('.html', '.png')}"/>
